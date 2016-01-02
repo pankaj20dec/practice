@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>One level menu</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.js"></script>
+    <script>
+        window.JQuery || document.write("<script src='scripts/jquery.js'><\/script>");
+    </script>
+    <style>
+       *{
+           margin: 0;
+           padding: 0;;
+       }
+       body{
+           font-family: arial, sans-serif;
+           font-size: 16px;
+       }
+        .menu-wrapper {margin: 50px 0;}
+        ul {width: 100%;display: block;text-align: center;margin: 0;padding: 0;font-size: 0;}
+        ul li {display: inline-block}
+        ul li a {text-decoration: none;color: #ffffff;background-color: #666666;padding: 15px 30px;display: block;font-size: 16px;}
+        ul li a:hover, ul li.active a {background-color: #808080; color: #7e0d0d}
+
+    </style>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <nav>
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+<script>
+    $(document).ready(function(){
+       $('li a').click(function(){
+           var $this = $(this);
+           var parent = $this.closest('li');
+           if(!(parent.hasClass('active'))){
+               parent.addClass('active');
+               parent.siblings().removeClass('active');
+           }
+       });
+    });
+</script>
+</body>
+</html>
