@@ -1,0 +1,29 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+	margin: 40px;
+}
+ul li{
+	background: #666666;
+	display: inline-block;
+	border: 1px solid #808080;
+	margin: 0 15px;
+}
+ul li.active{
+	background: #c7c6c5;
+}
+ul li a{
+	color: #fff;
+	display: block;
+	font-size: 22px;
+	padding: 15px 30px;
+	text-decoration: none;
+}
+.content{
+	display: none;
+	width: 600px;
+	margin: 0 55px;
+}
